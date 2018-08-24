@@ -12,6 +12,7 @@ k = 0
 # while True:
 # prompt user
 if (height > 0 or height < 6):
+    height -1;
     break
 
 
@@ -21,11 +22,11 @@ if (height > 0 or height < 6):
 # print a new line
 
 # for height number of rows
-    while i in range(height -1):
+    while i in range(height):
         print("^ "),
         # print | for j = height - 1
         for j in range(height - 1):
-            print("| ")
+            print("# ")
             # print remainder of height - j
             # for k in range(j - height):
             #     print("# ")
