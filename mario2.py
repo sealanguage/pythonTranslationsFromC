@@ -2,18 +2,18 @@ from cs50 import get_int
 
 #height = get_int("Height:")
 
-height = get_int("Height: ")
-i = 5
-j = 0
-k = 0
+heightN = get_int("Height: ")
+# i = 5
+# j = 0
+# k = 0
 
 # conditional while loop - while True     #prompt user      if condition:     break       WORKING
-if (height < 1 or height > 9):
-    print("Usage: height between 1 and 5")
+while (heightN < 1 or heightN > 9):
+    print("Usage: height between 1 and 9")
+    break
 
-if (height > 0 or height < 9):
+while (heightN > 1 or heightN < 9):
     print("value of height = ", height)
-
 
 # for every row in height
 # print spaces height - 1
@@ -21,21 +21,28 @@ if (height > 0 or height < 9):
 # print a new line
 
 # for height number of rows
-    while i in range(height):
-        print("height i starts: ", i)
-        i = height - 1
-        print("height i is: ", i)
+    rowP = heightN
+    for rowP in range(1, heightN, 1):
+        print("heightN starts: ", heightN)
+        # row = rows - 1
+        # print("row i is: ", row)
 
-        for j in range(height - i):
-            j = (i - 1)
-            print("^ " * j),
-            # print | for j = height - 1
-            for k in range(j + i):
-                print("# " * k)
+        for space in range(heightN, -1):
+            print("space is: ", space)
+            # space = (rows
+            print("space is: ", space)
+            print("^ " ),
+            # print ^ for space = height - 1
+            for hash in range(rowP):
+                print("# " * rowP)
+
                 # print remainder of height - j
                 # for k in range(j - height):
                 #     print("# ")
+
                 #     print()
+    break
+
 
 
 
