@@ -1,17 +1,43 @@
 from cs50 import get_string
 from cs50 import sys
 
+# if len(sys.argv) == 2:
+#     print(f "jello", {sys.argv[i])
+
+s = get_string("Name: ")
+initials = ""
+for c in s:
+    if c.isupper():
+        initials = c
+print(initials)
 
 
 if len (sys.argv) != 2 :
     print ("Usage: python caesar.py key")
     # sys.exit (1)
 
-string = get_string("Enter a string: ")
+# key = int(sys.argv[2])
+# print("key is: ", key)
 
 
-for c in string:
-    print("string is: ", c)
+# plaintext = get_string("Enter a string: ")
+
+
+# for c in plaintext:
+#     print("plaintext is: ", c)
+#     if plaintext.isalpha():
+#         if plaintext.isupper():
+#             print("TEXT IS UPPERCASE")
+#         elif plaintext.islower():
+#             print("text is lowercase")
+#         # print("text is alphabetic", plaintext)
+#     # else:
+#     #     print("text is not alpha")
+
+
+
+# ci = (pi + key) % 26
+
 # from __future__ import print_function
 # import sys
 # print(sys.argv, len(sys.argv)
