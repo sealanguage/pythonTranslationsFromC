@@ -4,35 +4,50 @@ from cs50 import sys
 # if len(sys.argv) == 2:
 #     print(f "jello", {sys.argv[i])
 
+
+if len (sys.argv) != 2:
+    print ("Usage: python caesar.py key")
+    # sys.exit (1)
+
+if sys.argv[1].isalpha():
+    print ("Usage: key should be a number")
+
+filename = sys.argv[0]
+print('Filename:', filename)
+key = int(sys.argv[1])
+print('Key: ', key)
+
+keymath = key + 10
+print("keymath: ", keymath)
+
+# from lecture, prints last capital letter in string
 s = get_string("Name: ")
 initials = ""
 for c in s:
     if c.isupper():
         initials = c
-print(initials)
+    elif c.islower():
+        initials = c
+    print(initials)
 
-
-if len (sys.argv) != 2 :
-    print ("Usage: python caesar.py key")
-    # sys.exit (1)
 
 # key = int(sys.argv[2])
 # print("key is: ", key)
 
 
-# plaintext = get_string("Enter a string: ")
+plaintext = get_string("Enter a string: ")
 
 
-# for c in plaintext:
-#     print("plaintext is: ", c)
-#     if plaintext.isalpha():
-#         if plaintext.isupper():
-#             print("TEXT IS UPPERCASE")
-#         elif plaintext.islower():
-#             print("text is lowercase")
-#         # print("text is alphabetic", plaintext)
-#     # else:
-#     #     print("text is not alpha")
+for c in plaintext:
+    print("plaintext is: ", c)
+    if c.isalpha():
+        if c.isupper():
+            print("TEXT IS UPPERCASE")
+        elif c.islower():
+            print("text is lowercase")
+        # print("text is alphabetic", plaintext)
+    # else:
+    #     print("text is not alpha")
 
 
 
